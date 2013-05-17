@@ -73,49 +73,49 @@
         						<ColumnDefinition/>
         						<ColumnDefinition/>
         					</Grid.ColumnDefinitions>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="1">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-                            <Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="2">
+                            <Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="2">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-                            <Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="3">
+                            <Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="3">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-                            <Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="4">
+                            <Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="4">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="1">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
 						</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="2">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="2">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="3">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="3">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="4">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="4">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="0">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="0">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="1">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="2">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="2">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="3">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="3">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="4">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="4">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         				</Grid>
@@ -132,49 +132,49 @@
         						<ColumnDefinition/>
         						<ColumnDefinition/>
         					</Grid.ColumnDefinitions>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="0">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="0">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="1">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="2">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="2">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="0">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="0">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="1">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="2">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="2">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="0">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="0">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="1">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="2">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="2">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="3" Grid.Column="0">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="3" Grid.Column="0">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="3" Grid.Column="1">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="3" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="3" Grid.Column="2">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="3" Grid.Column="2">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="4" Grid.Column="0">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="4" Grid.Column="0">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="4" Grid.Column="1">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="4" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Border BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="4" Grid.Column="2">
+        					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="4" Grid.Column="2">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         				</Grid>
@@ -193,14 +193,12 @@
         						<ColumnDefinition/>
         						<ColumnDefinition/>
         					</Grid.ColumnDefinitions>
-        					<Button Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" Foreground="#FFFF0202" Background="White" Margin="0" Padding="0"/>
-        					<Border x:Name="Border5" BorderBrush="{Binding setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="2" Grid.Column="2" Background="{Binding setting.ChainBackgroundColor, Mode=OneWay}" PointerEntered="Border_PointerEntered" PointerExited="Border_PointerExited">
+        					<Border x:Name="Cell0_0" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="0" Grid.Column="0" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-        					<Button Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" Foreground="#FFFF0202" Background="White" Grid.Column="1" Margin="0" Padding="0"/>
-        					<Button Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" Foreground="#FFFF0202" Background="White" Grid.Column="2" Margin="0" Padding="0"/>
-        					<Button Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" Foreground="#FFFF0202" Background="White" Grid.Column="3" Margin="0" Padding="0"/>
-        					<Button Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" Foreground="#FFFF0202" Background="White" Grid.Column="4" Margin="0" Padding="0"/>
+                            <Border x:Name="Cell0_1" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="0" Grid.Column="1" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited">
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                            </Border>
         				</Grid>
         			</Grid>
         		</Border>

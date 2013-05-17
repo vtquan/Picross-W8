@@ -60,13 +60,35 @@ namespace Picross_W8.Classes
             }
         }
 
+        private SolidColorBrush _cellIncorrectBackgroundColor;
+        public SolidColorBrush CellIncorrectBackgroundColor
+        {
+            get { return _cellIncorrectBackgroundColor; }
+            set
+            {
+                _cellIncorrectBackgroundColor = value;
+            }
+        }
+
+        private SolidColorBrush _cellCorrectBackgroundColor;
+        public SolidColorBrush CellCorrectBackgroundColor
+        {
+            get { return _cellCorrectBackgroundColor; }
+            set
+            {
+                _cellCorrectBackgroundColor = value;
+            }
+        }
+
         public Setting()
         {
-            this.ChainBackgroundColor = new SolidColorBrush(Colors.RoyalBlue);
+            this.ChainBackgroundColor = new SolidColorBrush(Colors.Green);
             this.ChainBorderColor = new SolidColorBrush(Colors.White);
-            this.CellBackgroundColor = new SolidColorBrush(Colors.Gray);
-            this.CellHoverBackgroundColor = new SolidColorBrush(Colors.Red);
+            this.CellBackgroundColor = new SolidColorBrush(Colors.LightGray);
+            this.CellHoverBackgroundColor = new SolidColorBrush(Colors.Gray);
             this.CellBorderColor = new SolidColorBrush(Colors.White);
+            this.CellCorrectBackgroundColor = new SolidColorBrush(Colors.DarkGray);
+            this.CellIncorrectBackgroundColor = new SolidColorBrush(Colors.LightCyan);
         }
     }
 }

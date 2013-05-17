@@ -13,13 +13,19 @@ namespace Picross_W8.Classes
 {
     class Picross 
     {
-        public Setting setting { get; set; }
-        public SolidColorBrush HoverBackgroundColor { get; set; }
+        public Setting _setting;
+        public Setting Setting
+        {
+            get { return _setting; }
+            set
+            {
+                _setting = value;
+            }
+        }
 
         public Picross()
         {
-            setting = new Setting();
-            this.HoverBackgroundColor = new SolidColorBrush(Colors.Gray);
+            _setting = new Setting();
         }
     }
 }

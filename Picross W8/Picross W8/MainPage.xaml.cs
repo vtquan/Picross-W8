@@ -53,19 +53,18 @@ namespace Picross_W8
         {
         }
 
-        private void Border_PointerEntered(object sender, PointerRoutedEventArgs e)
+        private void Cell_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Binding dd = new Binding();
-            dd.Path = new PropertyPath("setting.CellHoverBackgroundColor");
-            Border5.SetBinding(Border.BackgroundProperty, dd);
+            dd.Path = new PropertyPath("Setting.CellHoverBackgroundColor");
+            ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
         }
 
-        private void Border_PointerExited(object sender, PointerRoutedEventArgs e)
+        private void Cell_PointerExited(object sender, PointerRoutedEventArgs e)
         {
-
             Binding dd = new Binding();
-            dd.Path = new PropertyPath("setting.CellBackgroundColor");
-            Border5.SetBinding(Border.BackgroundProperty, dd);
+            dd.Path = new PropertyPath("Setting.CellBackgroundColor");
+            ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
         }
     }
 }
