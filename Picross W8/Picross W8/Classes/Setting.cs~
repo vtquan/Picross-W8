@@ -26,7 +26,7 @@ namespace Picross_W8.Classes
             get { return _chainBorderColor; }
             set
             {
-                _chainBorderColor = value;
+                _chainBorder = value;
             }
         }
 
@@ -46,7 +46,7 @@ namespace Picross_W8.Classes
             get { return _cellBorderColor; }
             set
             {
-                 _cellBorderColor = value;
+                 _cellBorderColor= value;
             }
         }
 
@@ -54,7 +54,7 @@ namespace Picross_W8.Classes
         {
             this.ChainBackgroundColor = new SolidColorBrush(Colors.RoyalBlue);
             this.ChainBorderColor = new SolidColorBrush(Colors.White);
-            this.CellBackgroundColor = new SolidColorBrush(Colors.Gray);
+            this.CellBackgroundColor = new SolidColorBrush(Colors.White);
             this.CellBorderColor = new SolidColorBrush(Colors.White);
         }
     }
