@@ -40,6 +40,16 @@ namespace Picross_W8.Classes
             }
         }
 
+        private SolidColorBrush _cellHoverBackgroundColor;
+        public SolidColorBrush CellHoverBackgroundColor
+        {
+            get { return _cellHoverBackgroundColor; }
+            set
+            {
+                _cellHoverBackgroundColor = value;
+            }
+        }
+
         private SolidColorBrush _cellBorderColor;
         public SolidColorBrush CellBorderColor
         {
@@ -55,6 +65,7 @@ namespace Picross_W8.Classes
             this.ChainBackgroundColor = new SolidColorBrush(Colors.RoyalBlue);
             this.ChainBorderColor = new SolidColorBrush(Colors.White);
             this.CellBackgroundColor = new SolidColorBrush(Colors.Gray);
+            this.CellHoverBackgroundColor = new SolidColorBrush(Colors.Red);
             this.CellBorderColor = new SolidColorBrush(Colors.White);
         }
     }

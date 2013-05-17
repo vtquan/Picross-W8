@@ -14,10 +14,12 @@ namespace Picross_W8.Classes
     class Picross 
     {
         public Setting setting { get; set; }
+        public SolidColorBrush HoverBackgroundColor { get; set; }
 
         public Picross()
         {
             setting = new Setting();
+            this.HoverBackgroundColor = new SolidColorBrush(Colors.Gray);
         }
     }
 }

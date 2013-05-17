@@ -39,7 +39,8 @@ namespace Picross_W8
         /// session.  This will be null the first time a page is visited.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
-            this.DataContext = new Picross();
+            Picross data = new Picross();
+            this.DataContext = data;
         }
 
         /// <summary>
@@ -50,6 +51,21 @@ namespace Picross_W8
         /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
+        }
+
+        private void Border_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Binding dd = new Binding();
+            dd.Path = new PropertyPath("setting.CellHoverBackgroundColor");
+            Border5.SetBinding(Border.BackgroundProperty, dd);
+        }
+
+        private void Border_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+
+            Binding dd = new Binding();
+            dd.Path = new PropertyPath("setting.CellBackgroundColor");
+            Border5.SetBinding(Border.BackgroundProperty, dd);
         }
     }
 }
