@@ -87,8 +87,8 @@ namespace Picross_W8.Classes
             this.CellBackgroundColor = new SolidColorBrush(Colors.LightGray);
             this.CellHoverBackgroundColor = new SolidColorBrush(Colors.Gray);
             this.CellBorderColor = new SolidColorBrush(Colors.White);
-            this.CellCorrectBackgroundColor = new SolidColorBrush(Colors.DarkGray);
-            this.CellIncorrectBackgroundColor = new SolidColorBrush(Colors.LightCyan);
+            this.CellCorrectBackgroundColor = new SolidColorBrush(Colors.Blue);
+            this.CellIncorrectBackgroundColor = new SolidColorBrush(Colors.Red);
         }
     }
 }

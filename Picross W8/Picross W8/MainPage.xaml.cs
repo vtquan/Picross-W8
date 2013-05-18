@@ -55,16 +55,38 @@ namespace Picross_W8
 
         private void Cell_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
-            Binding dd = new Binding();
-            dd.Path = new PropertyPath("Setting.CellHoverBackgroundColor");
-            ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+            if (((Border)sender).Background != ((Picross)this.DataContext).Setting.CellCorrectBackgroundColor && ((Border)sender).Background != ((Picross)this.DataContext).Setting.CellIncorrectBackgroundColor)
+            {
+                Binding dd = new Binding();
+                dd.Path = new PropertyPath("Setting.CellHoverBackgroundColor");
+                ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+            }
         }
 
         private void Cell_PointerExited(object sender, PointerRoutedEventArgs e)
         {
-            Binding dd = new Binding();
-            dd.Path = new PropertyPath("Setting.CellBackgroundColor");
-            ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+            if (((Border)sender).Background != ((Picross)this.DataContext).Setting.CellCorrectBackgroundColor && ((Border)sender).Background != ((Picross)this.DataContext).Setting.CellIncorrectBackgroundColor)
+            {
+                Binding dd = new Binding();
+                dd.Path = new PropertyPath("Setting.CellBackgroundColor");
+                ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+            }
+        }
+
+        private void Cell_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            if (Convert.ToBoolean(((Border)sender).Tag))
+            {
+                Binding dd = new Binding();
+                dd.Path = new PropertyPath("Setting.CellCorrectBackgroundColor");
+                ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+            }
+            else
+            {
+                Binding dd = new Binding();
+                dd.Path = new PropertyPath("Setting.CellIncorrectBackgroundColor");
+                ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+            }
         }
     }
 }

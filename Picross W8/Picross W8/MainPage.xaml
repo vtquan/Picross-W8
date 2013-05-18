@@ -193,10 +193,10 @@
         						<ColumnDefinition/>
         						<ColumnDefinition/>
         					</Grid.ColumnDefinitions>
-        					<Border x:Name="Cell0_0" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="0" Grid.Column="0" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited">
+        					<Border x:Name="Cell0_0" Tag="{Binding PicrossChart[0][0], Mode=OneWay}" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="0" Grid.Column="0" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-                            <Border x:Name="Cell0_1" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="0" Grid.Column="1" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited">
+                            <Border x:Name="Cell0_1" Tag="{Binding PicrossChart[0][1], Mode=OneWay}" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="0" Grid.Column="1" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
                                 <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
                             </Border>
         				</Grid>
