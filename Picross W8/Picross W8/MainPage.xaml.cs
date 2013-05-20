@@ -6,6 +6,7 @@ using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -23,6 +24,8 @@ namespace Picross_W8
     /// </summary>
     public sealed partial class MainPage : Picross_W8.Common.LayoutAwarePage
     {
+        int numError = 0; //hold the number of mistake made
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -75,7 +78,7 @@ namespace Picross_W8
 
         private void Cell_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            if (Convert.ToBoolean(((Border)sender).Tag))
+            if (Convert.ToBoolean(((Border)sender).Tag))    //if choice was correct
             {
                 Binding dd = new Binding();
                 dd.Path = new PropertyPath("Setting.CellCorrectBackgroundColor");
@@ -86,7 +89,48 @@ namespace Picross_W8
                 Binding dd = new Binding();
                 dd.Path = new PropertyPath("Setting.CellIncorrectBackgroundColor");
                 ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+
+                numError++;
+                if (numError == ((Picross)this.DataContext).Setting.NumLife)
+                {
+                    GameOver();
+                }
             }
+            SolidColorBrush b = new SolidColorBrush(Colors.Blue);
+            ((Border)sender).BorderBrush = b;
+        }
+
+        private async void GameOver()
+        {
+            var messageDialog = new MessageDialog("");
+
+            messageDialog = new MessageDialog("You run out of lives!");
+            messageDialog.Title = "Game Over";
+
+            messageDialog.Commands.Add(new UICommand(
+            "Retry",
+            new UICommandInvokedHandler(this.CommandInvokedHandler)));
+
+            messageDialog.Commands.Add(new UICommand(
+            "Close"));
+
+            // Set the command that will be invoked by default
+            messageDialog.DefaultCommandIndex = 1;
+
+            // Set the command to be invoked when escape is pressed
+            messageDialog.CancelCommandIndex = 1;
+
+            // Show the message dialog and wait
+            await messageDialog.ShowAsync();
+        }
+
+        private void CommandInvokedHandler(IUICommand command)  //restart the puzzle
+        {
+            RestartGame();
+        }
+
+        private void RestartGame()
+        {
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,19 @@ using Windows.UI.Xaml.Media;
 
 namespace Picross_W8.Classes
 {
-    class Setting
+    class Setting : INotifyPropertyChanged
     {
+        private int _numLife;   //number of incorrect choice made before game over
+        public int NumLife
+        {
+            get { return _numLife; }
+            set
+            {
+                _numLife = value;
+                OnPropertyChanged("NumLife");
+            }
+        }
+
         private SolidColorBrush _chainBackgroundColor;
         public SolidColorBrush ChainBackgroundColor
         {
@@ -17,6 +29,7 @@ namespace Picross_W8.Classes
             set
             {
                 _chainBackgroundColor = value;
+                OnPropertyChanged("ChainBackgroundColor");
             }
         }
 
@@ -27,6 +40,7 @@ namespace Picross_W8.Classes
             set
             {
                 _chainBorderColor = value;
+                OnPropertyChanged("ChainBorderColor");
             }
         }
 
@@ -37,6 +51,7 @@ namespace Picross_W8.Classes
             set
             {
                 _cellBackgroundColor = value;
+                OnPropertyChanged("CellBackgroundColor");
             }
         }
 
@@ -47,6 +62,7 @@ namespace Picross_W8.Classes
             set
             {
                 _cellHoverBackgroundColor = value;
+                OnPropertyChanged("CellHoverBackgroundColor");
             }
         }
 
@@ -56,7 +72,8 @@ namespace Picross_W8.Classes
             get { return _cellBorderColor; }
             set
             {
-                 _cellBorderColor = value;
+                _cellBorderColor = value;
+                OnPropertyChanged("CellBorderColor");
             }
         }
 
@@ -67,6 +84,7 @@ namespace Picross_W8.Classes
             set
             {
                 _cellIncorrectBackgroundColor = value;
+                OnPropertyChanged("CellIncorrectBackgroundColor");
             }
         }
 
@@ -77,18 +95,29 @@ namespace Picross_W8.Classes
             set
             {
                 _cellCorrectBackgroundColor = value;
+                OnPropertyChanged("CellCorrectBackgroundColor");
             }
         }
 
         public Setting()
         {
+            this.NumLife = 3;
             this.ChainBackgroundColor = new SolidColorBrush(Colors.Green);
             this.ChainBorderColor = new SolidColorBrush(Colors.White);
             this.CellBackgroundColor = new SolidColorBrush(Colors.LightGray);
             this.CellHoverBackgroundColor = new SolidColorBrush(Colors.Gray);
-            this.CellBorderColor = new SolidColorBrush(Colors.White);
+            this.CellBorderColor = new SolidColorBrush(Colors.Red);
             this.CellCorrectBackgroundColor = new SolidColorBrush(Colors.Blue);
             this.CellIncorrectBackgroundColor = new SolidColorBrush(Colors.Red);
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string property)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
+            }
         }
     }
 }

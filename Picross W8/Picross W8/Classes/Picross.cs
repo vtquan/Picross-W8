@@ -11,8 +11,30 @@ using Setting = Picross_W8.Classes.Setting;
 
 namespace Picross_W8.Classes
 {
-    class Picross 
+    class Picross : INotifyPropertyChanged
     {
+        private object[][] _chainRowChart;
+        public object[][] ChainRowChart
+        {
+            get { return _chainRowChart; }
+            set
+            {
+                _chainRowChart = value;
+                OnPropertyChanged("ChainRowChart");
+            }
+        }
+
+        private object[][] _chainColChart;
+        public object[][] ChainColChart
+        {
+            get { return _chainColChart; }
+            set
+            {
+                _chainColChart = value;
+                OnPropertyChanged("ChainColChart");
+            }
+        }
+
         private object[][] _picrossChart;
         public object[][] PicrossChart
         {
@@ -20,6 +42,7 @@ namespace Picross_W8.Classes
             set
             {
                 _picrossChart = value;
+                OnPropertyChanged("PicrossChart");
             }
         }
 
@@ -30,21 +53,32 @@ namespace Picross_W8.Classes
             set
             {
                 _setting = value;
+                OnPropertyChanged("PicrossChart");
             }
         }
 
         public Picross()
         {
-            _picrossChart = new object[5][];
-            _picrossChart[0] = new object[5];
-            _picrossChart[1] = new object[5];
-            _picrossChart[2] = new object[5];
-            _picrossChart[3] = new object[5];
-            _picrossChart[4] = new object[5];
-
-            _picrossChart[0][0] = true;
+            _picrossChart = new object[5][]
+            {
+                new object[] {1, 0, 0, 0, 1},
+                new object[] {1, 1, 1, 1, 1},
+                new object[] {1, 1, 1, 1, 1},
+                new object[] {1, 1, 1, 1, 1},
+                new object[] {1, 1, 1, 1, 1}
+            };
 
             _setting = new Setting();
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string property)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
+            }
+        }
+
     }
 }
