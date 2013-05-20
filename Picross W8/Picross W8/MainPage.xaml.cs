@@ -104,7 +104,7 @@ namespace Picross_W8
         {
             var messageDialog = new MessageDialog("");
 
-            messageDialog = new MessageDialog("You run out of lives!");
+            messageDialog = new MessageDialog(((Picross)this.DataContext).ChainColChart[2][0].ToString());
             messageDialog.Title = "Game Over";
 
             messageDialog.Commands.Add(new UICommand(

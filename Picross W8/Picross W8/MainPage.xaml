@@ -6,6 +6,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Picross_W8"
     xmlns:common="using:Picross_W8.Common"
+    xmlns:classes="using:Picross_W8.Classes"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -14,6 +15,7 @@
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">My Application</x:String>
+        <classes:IntConverter x:Key="intToStringConverter"/>
     </Page.Resources>
 
     <!--
@@ -74,7 +76,7 @@
         						<ColumnDefinition/>
         					</Grid.ColumnDefinitions>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[0][0], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
@@ -89,11 +91,11 @@
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[1][0], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
-						</Border>
+						    </Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="2">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
@@ -104,7 +106,7 @@
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="0">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[2][0], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="1">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
@@ -133,13 +135,13 @@
         						<ColumnDefinition/>
         					</Grid.ColumnDefinitions>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="0">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[0][0], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="1">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[0][1], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="2">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[0][2], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="0">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
