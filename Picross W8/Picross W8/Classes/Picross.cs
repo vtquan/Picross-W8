@@ -46,6 +46,17 @@ namespace Picross_W8.Classes
             }
         }
 
+        private int _numValid;  //number of valid space in PicrossChart
+        public int NumValid
+        {
+            get { return _numValid; }
+            set
+            {
+                _numValid = value;
+                OnPropertyChanged("NumValid");
+            }
+        }
+
         public Setting _setting;
         public Setting Setting
         {
@@ -88,10 +99,12 @@ namespace Picross_W8.Classes
 
             FillRowChart();
 
+            FillNumValid();
+
             _setting = new Setting();
         }
 
-        public void FillColChart()   //add value to ChainColChart base on the PicrossChart
+        public void FillColChart()  //add value to ChainColChart base on PicrossChart
         {//for each column in PicrossChart it starts at the bottom going upand looks for the length the first chain of 1 and place it in the highest row (bottom row) of the same column in ChainColChart. The next chain will go in the the second highest row of the same column and so on.
             int lengthChain = 0;
             int currentRow = 0; //row in ChainColChart to place lengthChain in
@@ -124,7 +137,7 @@ namespace Picross_W8.Classes
             }
         }
 
-        public void FillRowChart()   //add value to ChainRowChart base on the PicrossChart
+        public void FillRowChart()  //add value to ChainRowChart base on PicrossChart
         {//for each row in PicrossChart it starts at the right going left and looks for the length the first chain of 1 and place it in the highest column (right column) of the same row in ChainRowChart. The next chain will go in the the second highest column of the same row and so on.
             int lengthChain = 0;
             int currentCol = 0; //column in ChainRowChart to place lengthChain in
@@ -152,6 +165,21 @@ namespace Picross_W8.Classes
                             currentCol--;
                             lengthChain = 0;
                         }
+                    }
+                }
+            }
+        }
+
+        public void FillNumValid()  //give value to numValid base on PicrossChart
+        {
+            NumValid = 0;
+            for (int row = 0; row < PicrossChart.GetLength(0); row++)   //for each row in PicrossChart; Assuming it is a rectangular jagged array
+            {
+                for (int col = 0; col < PicrossChart[0].GetLength(0); col++)   //for each column in PicrossChart; Assuming it is a rectangular jagged array
+                {
+                    if (Convert.ToBoolean(PicrossChart[row][col]))
+                    {
+                        NumValid++;
                     }
                 }
             }
