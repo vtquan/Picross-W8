@@ -135,7 +135,7 @@
         						<ColumnDefinition/>
         					</Grid.ColumnDefinitions>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="0">
-                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding NumValid, Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[0][0], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="0" Grid.Column="1">
                                 <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[0][1], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
