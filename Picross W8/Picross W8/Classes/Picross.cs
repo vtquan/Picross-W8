@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI;
 using Windows.UI.Xaml.Media;
-
 using Setting = Picross_W8.Classes.Setting;
 
 namespace Picross_W8.Classes
@@ -35,8 +35,8 @@ namespace Picross_W8.Classes
             }
         }
 
-        private object[][] _picrossChart;
-        public object[][] PicrossChart
+        private int[][] _picrossChart;   //store which space in chart is valid; 1 = valid, 0 = not valid
+        public int[][] PicrossChart
         {
             get { return _picrossChart; }
             set
@@ -45,6 +45,19 @@ namespace Picross_W8.Classes
                 OnPropertyChanged("PicrossChart");
             }
         }
+
+        private int[][] _picrossColorChart;   //store which background should the corresponding border has; 0 = cellBackgroundColor, 1 = cellCorrectBackgroundColor, 2 = cellIncorrectBackgroundColor, 3 = cellHoverColor
+        public int[][] PicrossColorChart
+        {
+            get { return _picrossColorChart; }
+            set
+            {
+                _picrossColorChart = (int[][])value;
+                OnPropertyChanged("PicrossColorChart");
+            }
+        }
+
+        ObservableCollection<MyInt> Arr { get; set; }
 
         private int _numValid;  //number of valid space in PicrossChart
         public int NumValid
@@ -70,13 +83,72 @@ namespace Picross_W8.Classes
 
         public Picross()
         {
-            _picrossChart = new object[5][]
+            _picrossChart = new int[5][]
             {
-                new object[] {1, 0, 0, 0, 1},
-                new object[] {0, 1, 1, 1, 1},
-                new object[] {0, 1, 0, 0, 0},
-                new object[] {1, 1, 0, 1, 0},
-                new object[] {1, 1, 0, 1, 1}
+                new int[] {1, 0, 0, 0, 1},
+                new int[] {0, 1, 1, 1, 1},
+                new int[] {0, 1, 0, 0, 0},
+                new int[] {1, 1, 0, 1, 0},
+                new int[] {1, 1, 0, 1, 1}
+            };
+
+            _picrossColorChart = new int[5][]
+            {
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0}
+            };
+
+            Arr = new ObservableCollection<MyInt>
+            {
+                new MyInt()
+            };
+
+            _chainColChart = new int[3][]
+            {
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0}
+            };
+
+            FillColChart();
+
+            _chainRowChart = new int[5][]
+            {
+                new int[] {0, 0, 0},
+                new int[] {0, 0, 0},
+                new int[] {0, 0, 0},
+                new int[] {0, 0, 0},
+                new int[] {0, 0, 0}
+            };
+
+            FillRowChart();
+
+            FillNumValid();
+
+            _setting = new Setting();
+        }
+
+        public Picross(int i)
+        {
+            _picrossChart = new int[5][]
+            {
+                new int[] {1, 0, 0, 0, 1},
+                new int[] {0, 1, 1, 1, 1},
+                new int[] {0, 1, 0, 0, 0},
+                new int[] {1, 1, 0, 1, 0},
+                new int[] {1, 1, 0, 1, 1}
+            };
+
+            _picrossColorChart = new int[5][]
+            {
+                new int[] {0, 1, 2, 3, 0},
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0}
             };
 
             _chainColChart = new int[3][]

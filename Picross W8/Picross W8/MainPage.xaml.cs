@@ -63,9 +63,8 @@ namespace Picross_W8
         {
             if (((Border)sender).Background != ((Picross)this.DataContext).Setting.CellCorrectBackgroundColor && ((Border)sender).Background != ((Picross)this.DataContext).Setting.CellIncorrectBackgroundColor)
             {
-                Binding dd = new Binding();
-                dd.Path = new PropertyPath("Setting.CellHoverBackgroundColor");
-                ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+                int[] dim = getDim(Convert.ToInt32(((Border)sender).Tag));
+                ((Picross)this.DataContext).PicrossColorChart[dim[0]][dim[1]] = 3;
             }
         }
 
@@ -73,9 +72,8 @@ namespace Picross_W8
         {
             if (((Border)sender).Background != ((Picross)this.DataContext).Setting.CellCorrectBackgroundColor && ((Border)sender).Background != ((Picross)this.DataContext).Setting.CellIncorrectBackgroundColor)
             {
-                Binding dd = new Binding();
-                dd.Path = new PropertyPath("Setting.CellBackgroundColor");
-                ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+                int[] dim = getDim(Convert.ToInt32(((Border)sender).Tag));
+                ((Picross)this.DataContext).PicrossColorChart[dim[0]][dim[1]] = 0;
             }
         }
 
@@ -83,12 +81,14 @@ namespace Picross_W8
         {
             if (!gameOver)
             {
-                if (Convert.ToBoolean(((Border)sender).Tag))    //if choice was correct
+                int[] dim = getDim(Convert.ToInt32(((Border)sender).Tag));
+                if (Convert.ToBoolean(((Picross)this.DataContext).PicrossChart[dim[0]][dim[1]]))    //if choice was correct
                 {
-                    Binding dd = new Binding();
-                    dd.Path = new PropertyPath("Setting.CellCorrectBackgroundColor");
-                    ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
-
+                    //Binding dd = new Binding();
+                    //dd.Path = new PropertyPath("Setting.CellCorrectBackgroundColor");
+                    //((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+                    ((Picross)this.DataContext).PicrossColorChart[dim[0]][dim[1]] = 1;
+                    ((Picross)this.DataContext).PicrossColorChart = ((Picross)this.DataContext).PicrossColorChart;
                     numCorrect++;
                     if (numCorrect == ((Picross)this.DataContext).NumValid)
                     {
@@ -97,10 +97,11 @@ namespace Picross_W8
                 }
                 else
                 {
-                    Binding dd = new Binding();
-                    dd.Path = new PropertyPath("Setting.CellIncorrectBackgroundColor");
-                    ((Border)sender).SetBinding(Border.BackgroundProperty, dd);
-
+                    //Binding dd = new Binding();
+                    //dd.Path = new PropertyPath("Setting.CellIncorrectBackgroundColor");
+                    //((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+                    ((Picross)this.DataContext).PicrossColorChart[dim[0]][dim[1]] = 2;
+                    ((Picross)this.DataContext).PicrossColorChart = ((Picross)this.DataContext).PicrossColorChart;
                     numError++;
                     if (numError == ((Picross)this.DataContext).Setting.NumLife)
                     {
@@ -165,6 +166,44 @@ namespace Picross_W8
 
         private void RestartGame()
         {
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Picross data = new Picross(1);
+            //this.DataContext = data;
+            //((Picross)this.DataContext).Setting.TestVal[0] = 3;
+            //((Picross)this.DataContext).PicrossColorChart[0][1] = 1;
+            //((Picross)this.DataContext).PicrossColorChart[0][2] = 2;
+            //((Picross)this.DataContext).PicrossColorChart[0][3] = 3;
+
+            //((Picross)this.DataContext).Setting.TestVal = ((Picross)this.DataContext).Setting.TestVal;
+
+            //((Picross)this.DataContext).PicrossColorChart = ((Picross)this.DataContext).PicrossColorChart;
+
+            ((Picross)this.DataContext).PicrossColorChart[0][0] = 1;
+            ((Picross)this.DataContext).PicrossColorChart = ((Picross)this.DataContext).PicrossColorChart;
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            ((Picross)this.DataContext).PicrossColorChart[0][1] = 1;
+            ((Picross)this.DataContext).PicrossColorChart = ((Picross)this.DataContext).PicrossColorChart;
+            ((Picross)this.DataContext).PicrossColorChart[0][2] = 1;
+            ((Picross)this.DataContext).PicrossColorChart = ((Picross)this.DataContext).PicrossColorChart;
+            ((Picross)this.DataContext).PicrossColorChart[0][3] = 1;
+            ((Picross)this.DataContext).PicrossColorChart = ((Picross)this.DataContext).PicrossColorChart;
+            ((Picross)this.DataContext).PicrossColorChart[0][4] = 1;
+            ((Picross)this.DataContext).PicrossColorChart = ((Picross)this.DataContext).PicrossColorChart;
+        }
+
+        private int[] getDim(int tag)    //get dimensional from tag value
+        {
+            int[] dim = new int[2];
+            dim[0] = tag / ((Picross)this.DataContext).Setting.NumSize;
+            dim[1] = tag % ((Picross)this.DataContext).Setting.NumSize;
+
+            return dim;
         }
     }
 }

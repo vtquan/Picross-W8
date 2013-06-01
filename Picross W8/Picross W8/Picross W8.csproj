@@ -107,6 +107,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Converter.cs" />
+    <Compile Include="Classes\MyVar.cs" />
     <Compile Include="Classes\Picross.cs" />
     <Compile Include="Classes\Setting.cs" />
     <Compile Include="Common\BindableBase.cs" />

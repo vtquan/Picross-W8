@@ -22,6 +22,17 @@ namespace Picross_W8.Classes
             }
         }
 
+        private int _numSize;   //size of picross chart
+        public int NumSize
+        {
+            get { return _numSize; }
+            set
+            {
+                _numSize = value;
+                OnPropertyChanged("NumSize");
+            }
+        }
+
         private SolidColorBrush _chainBackgroundColor;
         public SolidColorBrush ChainBackgroundColor
         {
@@ -99,9 +110,22 @@ namespace Picross_W8.Classes
             }
         }
 
+        private int[] _testVal;
+        public int[] TestVal
+        {
+            get { return _testVal; }
+            set
+            {
+                _testVal = value;
+                OnPropertyChanged("TestVal");
+            }
+        }
+
         public Setting()
         {
+            this.TestVal = new int[] { 1, 2 };
             this.NumLife = 3;
+            this.NumSize = 5;
             this.ChainBackgroundColor = new SolidColorBrush(Colors.Green);
             this.ChainBorderColor = new SolidColorBrush(Colors.White);
             this.CellBackgroundColor = new SolidColorBrush(Colors.LightGray);

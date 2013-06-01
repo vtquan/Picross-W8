@@ -15,7 +15,8 @@
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">My Application</x:String>
-        <classes:IntConverter x:Key="intToStringConverter"/>
+        <classes:IntToStringConverter x:Key="intToStringConverter"/>
+        <classes:IntToBrushConverter x:Key="intToBrushConverter"/>
     </Page.Resources>
 
     <!--
@@ -195,25 +196,27 @@
         						<ColumnDefinition/>
         						<ColumnDefinition/>
         					</Grid.ColumnDefinitions>
-                            <Border x:Name="Cell0_0" Tag="{Binding PicrossChart[0][0], Mode=TwoWay}" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="0" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            <Border x:Name="Cell0_0" Tag="0" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="0" Background="{Binding PicrossColorChart[0][0], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
         						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
-                            <Border x:Name="Cell0_1" Tag="{Binding PicrossChart[0][1], Mode=TwoWay}" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="1" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            <Border x:Name="Cell0_1" Tag="1" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="1" Background="{Binding PicrossColorChart[0][1], Mode=OneWay, Converter={StaticResource intToBrushConverter}}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
                                 <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
                             </Border>
-                            <Border x:Name="Cell0_2" Tag="{Binding PicrossChart[0][2], Mode=TwoWay}" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="2" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            <Border x:Name="Cell0_2" Tag="2" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="2" Background="{Binding PicrossColorChart[0][2], Mode=OneWay, Converter={StaticResource intToBrushConverter}}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
                             	<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
                             </Border>
-                            <Border x:Name="Cell0_3" Tag="{Binding PicrossChart[0][3], Mode=TwoWay}" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="3" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            <Border x:Name="Cell0_3" Tag="3" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="3" Background="{Binding PicrossColorChart[0][3], Mode=OneWay, Converter={StaticResource intToBrushConverter}}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
                             	<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
                             </Border>
-                            <Border x:Name="Cell0_4" Tag="{Binding PicrossChart[0][4], Mode=TwoWay}" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="0" Grid.Column="4" Background="{Binding Setting.CellBackgroundColor, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            <Border x:Name="Cell0_4" Tag="4" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="0" Grid.Column="4" Background="{Binding PicrossColorChart[0][4], Mode=OneWay, Converter={StaticResource intToBrushConverter}}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
                             	<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
                             </Border>
         				</Grid>
         			</Grid>
         		</Border>
         	</Viewbox>
+            <Button Content="{Binding Setting.TestVal[0], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="528,0,0,0" Click="Button_Click"/>
+            <Button Content="{Binding Setting.TestVal[0], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="577,0,0,0" Click="Button2_Click"/>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>
