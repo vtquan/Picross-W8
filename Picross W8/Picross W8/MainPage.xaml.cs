@@ -103,6 +103,7 @@ namespace Picross_W8
                     //Binding dd = new Binding();
                     //dd.Path = new PropertyPath("Setting.CellIncorrectBackgroundColor");
                     //((Border)sender).SetBinding(Border.BackgroundProperty, dd);
+
                     ((Picross)this.DataContext).PicrossColorChart[dim[0]][dim[1]] = 2;
                     ((Picross)this.DataContext).PicrossColorChart = ((Picross)this.DataContext).PicrossColorChart;
                     ((Picross)this.DataContext).NumError++;

@@ -14,7 +14,6 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
         <classes:IntToStringConverter x:Key="intToStringConverter"/>
         <classes:IntToBrushConverter x:Key="intToBrushConverter"/>
     </Page.Resources>
@@ -37,7 +36,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{Binding PuzzleName, Mode=OneWay}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
         <Grid Margin="0,5,0,0" Grid.Row="1">
         	<Viewbox HorizontalAlignment="Left" Height="481" VerticalAlignment="Top" Width="481">
@@ -80,46 +79,46 @@
                                 <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[0][0], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="1">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[0][1], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
                             <Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="2">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[0][2], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
                             <Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="3">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[0][3], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
                             <Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Column="4">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[0][4], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1">
                                 <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[1][0], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="1">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[1][1], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
 						    </Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="2">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[1][2], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="3">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[1][3], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="4">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[1][4], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="0">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[2][0], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+				<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[2][0], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="1">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[2][1], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="2">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[2][2], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="3">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[2][3], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="4">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainColChart[2][4], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         				</Grid>
         				<Grid Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Row="3">
@@ -145,40 +144,40 @@
                                 <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[0][2], Mode=OneWay, Converter={StaticResource intToStringConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="0">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[1][0], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="1">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[1][1], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="1" Grid.Column="2">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[1][2], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="0">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[2][0], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="1">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[2][1], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="2" Grid.Column="2">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+				<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[2][2], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="3" Grid.Column="0">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[3][0], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="3" Grid.Column="1">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[3][1], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="3" Grid.Column="2">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[3][2], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="4" Grid.Column="0">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[4][0], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="4" Grid.Column="1">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[4][1], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         					<Border BorderBrush="{Binding Setting.ChainBorderColor, Mode=OneWay}" BorderThickness="1" Background="{Binding Setting.ChainBackgroundColor, Mode=OneWay}" Margin="0" Grid.Row="4" Grid.Column="2">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="{Binding ChainRowChart[4][2], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
         				</Grid>
         				<Grid Grid.ColumnSpan="5" Grid.RowSpan="5" Grid.Row="3" Grid.Column="3">
@@ -197,19 +196,54 @@
         						<ColumnDefinition/>
         					</Grid.ColumnDefinitions>
                             <Border x:Name="Cell0_0" Tag="0" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="0" Background="{Binding PicrossColorChart[0][0], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
-        						<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
         					</Border>
                             <Border x:Name="Cell0_1" Tag="1" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="1" Background="{Binding PicrossColorChart[0][1], Mode=OneWay, Converter={StaticResource intToBrushConverter}}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
-                                <TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
                             </Border>
                             <Border x:Name="Cell0_2" Tag="2" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="2" Background="{Binding PicrossColorChart[0][2], Mode=OneWay, Converter={StaticResource intToBrushConverter}}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
-                            	<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
                             </Border>
                             <Border x:Name="Cell0_3" Tag="3" BorderBrush="{Binding Setting.CellBorderColor, Mode=TwoWay}" BorderThickness="1" Grid.Row="0" Grid.Column="3" Background="{Binding PicrossColorChart[0][3], Mode=OneWay, Converter={StaticResource intToBrushConverter}}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
-                            	<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
                             </Border>
                             <Border x:Name="Cell0_4" Tag="4" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="0" Grid.Column="4" Background="{Binding PicrossColorChart[0][4], Mode=OneWay, Converter={StaticResource intToBrushConverter}}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
-                            	<TextBlock TextWrapping="Wrap" FontSize="29.333" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+                            </Border>
+                            <Border x:Name="Cell1_0" Tag="5" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="1" Grid.Column="0" Background="{Binding PicrossColorChart[1][0], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell1_1" Tag="6" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="1" Grid.Column="1" Background="{Binding PicrossColorChart[1][1], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell1_2" Tag="7" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="1" Grid.Column="2" Background="{Binding PicrossColorChart[1][2], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell1_3" Tag="8" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="1" Grid.Column="3" Background="{Binding PicrossColorChart[1][3], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell1_4" Tag="9" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="1" Grid.Column="4" Background="{Binding PicrossColorChart[1][4], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell2_0" Tag="10" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="2" Grid.Column="0" Background="{Binding PicrossColorChart[2][0], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell2_1" Tag="11" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="2" Grid.Column="1" Background="{Binding PicrossColorChart[2][1], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell2_2" Tag="12" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="2" Grid.Column="2" Background="{Binding PicrossColorChart[2][2], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell2_3" Tag="13" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="2" Grid.Column="3" Background="{Binding PicrossColorChart[2][3], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell2_4" Tag="14" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="2" Grid.Column="4" Background="{Binding PicrossColorChart[2][4], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell3_0" Tag="15" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="3" Grid.Column="0" Background="{Binding PicrossColorChart[3][0], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell3_1" Tag="16" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="3" Grid.Column="1" Background="{Binding PicrossColorChart[3][1], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell3_2" Tag="17" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="3" Grid.Column="2" Background="{Binding PicrossColorChart[3][2], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell3_3" Tag="18" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="3" Grid.Column="3" Background="{Binding PicrossColorChart[3][3], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell3_4" Tag="19" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="3" Grid.Column="4" Background="{Binding PicrossColorChart[3][4], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell4_0" Tag="20" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="4" Grid.Column="0" Background="{Binding PicrossColorChart[4][0], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell4_1" Tag="21" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="4" Grid.Column="1" Background="{Binding PicrossColorChart[4][1], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell4_2" Tag="22" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="4" Grid.Column="2" Background="{Binding PicrossColorChart[4][2], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell4_3" Tag="23" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="4" Grid.Column="3" Background="{Binding PicrossColorChart[4][3], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed">
+                            </Border>
+                            <Border x:Name="Cell4_4" Tag="24" BorderBrush="{Binding Setting.CellBorderColor, Mode=OneWay}" BorderThickness="1" Grid.Row="4" Grid.Column="4" Background="{Binding PicrossColorChart[4][4], Converter={StaticResource intToBrushConverter}, Mode=OneWay}" PointerEntered="Cell_PointerEntered" PointerExited="Cell_PointerExited" PointerPressed="Cell_PointerPressed" Margin="0,0,0,-1">
                             </Border>
         				</Grid>
         			</Grid>

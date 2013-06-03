@@ -13,6 +13,8 @@ namespace Picross_W8.Classes
 {
     class Picross : INotifyPropertyChanged
     {
+        public string PuzzleName { get; set; }
+
         private int[][] _chainRowChart;
         public int[][] ChainRowChart
         {
@@ -78,13 +80,14 @@ namespace Picross_W8.Classes
 
         public Picross()
         {
+            PuzzleName = "Picross 5x5";
             _picrossChart = new int[5][]
             {
-                new int[] {1, 0, 0, 0, 1},
-                new int[] {0, 0, 0, 0, 0},
-                new int[] {0, 0, 0, 0, 0},
-                new int[] {0, 0, 0, 0, 0},
-                new int[] {0, 0, 0, 0, 0}
+                new int[] {1, 1, 0, 0, 0},
+                new int[] {1, 0, 1, 0, 1},
+                new int[] {1, 1, 1, 0, 0},
+                new int[] {0, 1, 1, 1, 0},
+                new int[] {1, 0, 1, 1, 1}
             };
 
             _picrossColorChart = new int[5][]
