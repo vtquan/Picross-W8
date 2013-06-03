@@ -132,18 +132,19 @@ namespace Picross_W8.Classes
 
         public Picross(int i)
         {
+            PuzzleName = "Picross 5x5 2";
             _picrossChart = new int[5][]
             {
-                new int[] {1, 0, 0, 0, 1},
-                new int[] {0, 1, 1, 1, 1},
-                new int[] {0, 1, 0, 0, 0},
-                new int[] {1, 1, 0, 1, 0},
-                new int[] {1, 1, 0, 1, 1}
+                new int[] {1, 1, 0, 1, 1},
+                new int[] {1, 0, 1, 0, 1},
+                new int[] {1, 1, 1, 0, 0},
+                new int[] {0, 1, 1, 1, 0},
+                new int[] {1, 0, 1, 1, 1}
             };
 
             _picrossColorChart = new int[5][]
             {
-                new int[] {0, 1, 2, 3, 0},
+                new int[] {1, 0, 0, 0, 0},
                 new int[] {0, 0, 0, 0, 0},
                 new int[] {0, 0, 0, 0, 0},
                 new int[] {0, 0, 0, 0, 0},
@@ -171,6 +172,12 @@ namespace Picross_W8.Classes
             FillRowChart();
 
             FillNumValid();
+
+            this.NumCorrect = 0;
+
+            this.NumError = 0;
+
+            this.GameState = 0;
 
             _setting = new Setting();
         }
@@ -265,5 +272,14 @@ namespace Picross_W8.Classes
             }
         }
 
+        public static ObservableCollection<Picross> GetPicross()
+        {
+            var picross = new ObservableCollection<Picross>();
+
+            picross.Add(new Picross());
+            picross.Add(new Picross(1));
+
+            return picross;
+        }
     }
 }
