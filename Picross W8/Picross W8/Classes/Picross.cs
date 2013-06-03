@@ -57,20 +57,15 @@ namespace Picross_W8.Classes
             }
         }
 
-        ObservableCollection<MyInt> Arr { get; set; }
+        public int NumValid { get; set; }  //number of valid space in PicrossChart
 
-        private int _numValid;  //number of valid space in PicrossChart
-        public int NumValid
-        {
-            get { return _numValid; }
-            set
-            {
-                _numValid = value;
-                OnPropertyChanged("NumValid");
-            }
-        }
+        public int NumCorrect { get; set; }    //number of correct choices made in game
 
-        public Setting _setting;
+        public int NumError { get; set; }  //number of errors made in game
+
+        public int GameState { get; set; }  //number of errors made in game
+
+        private Setting _setting;
         public Setting Setting
         {
             get { return _setting; }
@@ -86,10 +81,10 @@ namespace Picross_W8.Classes
             _picrossChart = new int[5][]
             {
                 new int[] {1, 0, 0, 0, 1},
-                new int[] {0, 1, 1, 1, 1},
-                new int[] {0, 1, 0, 0, 0},
-                new int[] {1, 1, 0, 1, 0},
-                new int[] {1, 1, 0, 1, 1}
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0}
             };
 
             _picrossColorChart = new int[5][]
@@ -99,11 +94,6 @@ namespace Picross_W8.Classes
                 new int[] {0, 0, 0, 0, 0},
                 new int[] {0, 0, 0, 0, 0},
                 new int[] {0, 0, 0, 0, 0}
-            };
-
-            Arr = new ObservableCollection<MyInt>
-            {
-                new MyInt()
             };
 
             _chainColChart = new int[3][]
@@ -127,6 +117,12 @@ namespace Picross_W8.Classes
             FillRowChart();
 
             FillNumValid();
+
+            this.NumCorrect = 0;
+
+            this.NumError = 0;
+
+            this.GameState = 0;
 
             _setting = new Setting();
         }
