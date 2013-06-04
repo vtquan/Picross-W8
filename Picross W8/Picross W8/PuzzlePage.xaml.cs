@@ -177,6 +177,8 @@ namespace Picross_W8
         private void RestartGame()
         {
             Picross data = new Picross();
+            PuzzleGrid.DataContext = new Picross();
+
             this.CoolListView.ItemsSource = Picross.GetPicross();
         }
 
