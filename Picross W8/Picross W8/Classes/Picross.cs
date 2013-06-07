@@ -15,6 +15,8 @@ namespace Picross_W8.Classes
     {
         public string PuzzleName { get; set; }
 
+        public int ID { get; set; }
+
         private int[][] _chainRowChart;
         public int[][] ChainRowChart
         {
@@ -132,19 +134,95 @@ namespace Picross_W8.Classes
 
         public Picross(int i)
         {
-            PuzzleName = "Picross 5x5 2";
-            _picrossChart = new int[5][]
+            ID = i;
+
+            if (ID == 1)
             {
-                new int[] {1, 1, 0, 1, 1},
-                new int[] {1, 0, 1, 0, 1},
-                new int[] {1, 1, 1, 0, 0},
-                new int[] {0, 1, 1, 1, 0},
-                new int[] {1, 0, 1, 1, 1}
-            };
+                PuzzleName = "House";
+
+                _picrossChart = new int[5][]
+                {
+                    new int[] {0, 0, 1, 0, 0},
+                    new int[] {0, 1, 1, 1, 0},
+                    new int[] {1, 1, 1, 1, 1},
+                    new int[] {1, 1, 0, 1, 1},
+                    new int[] {1, 1, 0, 1, 1}
+                };
+            }
+
+            if (ID == 2)
+            {
+                PuzzleName = "Man";
+
+                _picrossChart = new int[5][]
+                {
+                    new int[] {1, 0, 1, 0, 1},
+                    new int[] {0, 1, 1, 1, 0},
+                    new int[] {0, 0, 1, 0, 0},
+                    new int[] {0, 1, 0, 1, 0},
+                    new int[] {1, 0, 0, 0, 1}
+                };
+            }
+
+            if (ID == 3)
+            {
+                PuzzleName = "Bear";
+
+                _picrossChart = new int[5][]
+                {
+                    new int[] {0, 1, 0, 1, 0},
+                    new int[] {1, 1, 0, 1, 1},
+                    new int[] {0, 0, 1, 0, 0},
+                    new int[] {1, 0, 0, 0, 1},
+                    new int[] {1, 1, 1, 1, 1}
+                };
+            }
+
+            if (ID == 4)
+            {
+                PuzzleName = "Liver";
+
+                _picrossChart = new int[5][]
+                {
+                    new int[] {1, 1, 0, 1, 1},
+                    new int[] {1, 0, 0, 0, 1},
+                    new int[] {1, 1, 1, 0, 0},
+                    new int[] {1, 0, 0, 0, 0},
+                    new int[] {1, 0, 1, 1, 1}
+                };
+            }
+
+            if (ID == 5)
+            {
+                PuzzleName = "Facebook";
+
+                _picrossChart = new int[5][]
+                {
+                    new int[] {0, 0, 1, 1, 1},
+                    new int[] {0, 0, 1, 0, 0},
+                    new int[] {0, 0, 1, 0, 0},
+                    new int[] {0, 1, 1, 1, 0},
+                    new int[] {0, 0, 1, 0, 0}
+                };
+            }
+
+            if (ID == 6)
+            {
+                PuzzleName = "Tetris";
+
+                _picrossChart = new int[5][]
+                {
+                    new int[] {0, 0, 0, 0, 0},
+                    new int[] {1, 1, 0, 0, 0},
+                    new int[] {0, 1, 1, 0, 0},
+                    new int[] {0, 0, 0, 0, 0},
+                    new int[] {1, 1, 0, 1, 1}
+                };
+            }
 
             _picrossColorChart = new int[5][]
             {
-                new int[] {1, 0, 0, 0, 0},
+                new int[] {0, 0, 0, 0, 0},
                 new int[] {0, 0, 0, 0, 0},
                 new int[] {0, 0, 0, 0, 0},
                 new int[] {0, 0, 0, 0, 0},
@@ -276,8 +354,12 @@ namespace Picross_W8.Classes
         {
             var picross = new ObservableCollection<Picross>();
 
-            picross.Add(new Picross());
             picross.Add(new Picross(1));
+            picross.Add(new Picross(2));
+            picross.Add(new Picross(3));
+            picross.Add(new Picross(4));
+            picross.Add(new Picross(5));
+            picross.Add(new Picross(6));
 
             return picross;
         }

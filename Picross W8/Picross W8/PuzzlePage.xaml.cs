@@ -153,7 +153,7 @@ namespace Picross_W8
             messageDialog.Title = "Congrat";
 
             messageDialog.Commands.Add(new UICommand(
-            "Retry",
+            "Restart",
             new UICommandInvokedHandler(this.CommandInvokedHandler)));
 
             messageDialog.Commands.Add(new UICommand(
@@ -176,9 +176,6 @@ namespace Picross_W8
 
         private void RestartGame()
         {
-            Picross data = new Picross();
-            PuzzleGrid.DataContext = new Picross();
-
             this.CoolListView.ItemsSource = Picross.GetPicross();
         }
 
@@ -204,8 +201,7 @@ namespace Picross_W8
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            ((Picross)PuzzleGrid.DataContext).PicrossColorChart[0][0] = 1;
-            ((Picross)PuzzleGrid.DataContext).PicrossColorChart = ((Picross)PuzzleGrid.DataContext).PicrossColorChart;
+            RestartGame();
         }
     }
 }

@@ -242,7 +242,7 @@
 						</Grid>
 					</Border>
 				</Viewbox>
-                <Button Content="{Binding PicrossColorChart[0][0], Converter={StaticResource intToStringConverter}, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="636,152,0,0" Click="Button_Click_1" Background="{Binding PicrossColorChart[0][0], Converter={StaticResource intToBrushConverter}, Mode=OneWay}"/>
+                <Button Content="Quit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="376,481,0,0" Click="Button_Click_1" FontSize="36"/>
 			</Grid>
 		</Grid>
 	</Grid>
